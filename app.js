@@ -1,11 +1,10 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configuración inicial
     let tasks = JSON.parse(localStorage.getItem('kanbanTasks')) || {
-        1: { id: 1, title: 'Recolección de requisitos', componente: 'planificación', detalles: 'Definir funcionalidades esenciales del sistema', status: 'pending' },
-        2: { id: 2, title: 'Diseño de arquitectura técnica', componente: 'planificación', detalles: 'Seleccionar stack tecnológico (Node.js, React, PostgreSQL)', status: 'pending' },
-        3: { id: 3, title: 'Crear diagrama ER', componente: 'planificación', detalles: 'Diseñar diagrama Entidad-Relación', status: 'pending' },
-        4: { id: 4, title: 'Prototipado de interfaces', componente: 'planificación', detalles: 'Crear prototipos de las interfaces de usuario', status: 'pending' },
-        5: { id: 5, title: 'Configuración inicial de BD', componente: 'base-datos', detalles: 'Configurar servidor y entorno de base de datos', status: 'pending' }
+        1: { id: 1, title: 'EndPoints', componente: 'backend', detalles: 'Crear endpoints correspondientes a transacciones, pago y deuda', status: 'pending' },
+        2: { id: 2, title: 'Organizar Estructura', componente: 'backend', detalles: 'Separar Controllers de Routes', status: 'pending' },
+        3: { id: 3, title: 'Routes', componente: 'backend', detalles: 'Routes con endpoints completados: usuarios, clientes, tasa de cambio.', status: 'progress' },
+        4: { id: 4, title: 'DB PostgreSQL', componente: 'base-datos', detalles: 'Base de Datos en Ejecucion', status: 'progress' }
     };
 
     // Elementos del DOM
