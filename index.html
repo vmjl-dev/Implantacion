@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kanban - Control de Deudas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>🚀 Sistema Kanban - Control de Deudas</h1>
+    </header>
+
+    <main>
+        <!-- Botón flotante para agregar tareas -->
+        <button id="addTaskButton" class="floating-button">
+            <i class="fas fa-plus"></i>
+        </button>
+
+        <!-- Tablero Kanban -->
+        <section class="kanban-section">
+            <div class="kanban-board">
+                <div class="kanban-column" data-status="pending">
+                    <h2>📝 Pendientes</h2>
+                    <div class="tasks-container"></div>
+                </div>
+                
+                <div class="kanban-column" data-status="progress">
+                    <h2>⚡ En ejecución</h2>
+                    <div class="tasks-container"></div>
+                </div>
+                
+                <div class="kanban-column" data-status="review">
+                    <h2>🔎 Revisión</h2>
+                    <div class="tasks-container"></div>
+                </div>
+                
+                <div class="kanban-column" data-status="completed">
+                    <h2>✅ Terminadas</h2>
+                    <div class="tasks-container"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Modal para crear tareas -->
+        <div id="taskModal" class="modal">
+            <div class="modal-content">
+                <span class="close-modal">&times;</span>
+                <h2>Crear Nueva Tarea</h2>
+                <form id="taskForm">
+                    <div class="form-group">
+                        <label for="taskTitle">Título:</label>
+                        <input type="text" id="taskTitle" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskComponent">Componente:</label>
+                        <select id="taskComponent" required>
+                            <option value="planificación">Planificación</option>
+                            <option value="base-datos">Base de Datos</option>
+                            <option value="backend">Backend</option>
+                            <option value="frontend">Frontend</option>
+                            <option value="testing">Testing</option>
+                            <option value="despliegue">Despliegue</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskDetails">Detalles:</label>
+                        <textarea id="taskDetails" rows="3"></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="taskStatus">Estado:</label>
+                        <select id="taskStatus">
+                            <option value="pending">Pendiente</option>
+                            <option value="progress">En progreso</option>
+                            <option value="review">Revisión</option>
+                            <option value="completed">Completada</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Crear Tarea</button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
