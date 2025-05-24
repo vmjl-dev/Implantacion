@@ -1,10 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Configuración inicial
     let tasks = JSON.parse(localStorage.getItem('kanbanTasks')) || {
-        1: { id: 1, title: 'EndPoints', componente: 'backend', detalles: 'Crear endpoints correspondientes a transacciones, pago y deuda', status: 'pending' },
-        2: { id: 2, title: 'Organizar Estructura', componente: 'backend', detalles: 'Separar Controllers de Routes', status: 'pending' },
-        3: { id: 3, title: 'Routes', componente: 'backend', detalles: 'Routes con endpoints completados: usuarios, clientes, tasa de cambio.', status: 'progress' },
-        4: { id: 4, title: 'DB PostgreSQL', componente: 'base-datos', detalles: 'Base de Datos en Ejecucion', status: 'progress' }
+        1: { id: 1, title: 'Vistas', componente: 'frontend', detalles: 'Crear vistas correspondientes a clientes, transacciones, pagos y deudas', status: 'pending' },
+        2: { id: 2, title: 'Uso de Modelos', componente: 'testing', detalles: 'Pruebas posteriores a la implementacion de modelos', status: 'progress' },
+        3: { id: 3, title: 'DB PostgreSQL', componente: 'base-datos', detalles: 'Base de Datos en Ejecucion', status: 'completed' },
+        4: {id: 4, title: 'Endpoints', componente: 'backend', detalles: 'Clientes, Deudas, Pagos, Transacciones, Tasa De Cambio', status: 'completed' },
+        5: {id: 5, title: 'Actualizacion Tasa Cambio', componente: 'backend', detalles: 'Sincronizado con pydolarve.com', status: 'completed' }
     };
 
     // Elementos del DOM
